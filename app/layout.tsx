@@ -1,8 +1,9 @@
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./Nav/Nav";
 import Footer from "./Footer/Footer";
 import { CartProvider } from "./context/CartContext";
@@ -30,8 +31,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <CartProvider>
-          <Nav />
+          <Suspense fallback={<div>Loading navigation...</div>}>
+            <Nav />
+          </Suspense>
+
           {children}
+
           <Footer />
         </CartProvider>
       </body>
