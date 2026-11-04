@@ -35,7 +35,7 @@ export default function About() {
 
         <div className="about-hero-image">
           <Image
-            src="/banner2.jpg"
+            src="/offer1.jpg"
             alt="Shopex fashion collection"
             width={700}
             height={650}
@@ -72,7 +72,7 @@ export default function About() {
       <section className="about-story">
         <div className="about-story-image">
           <Image
-            src="/banner.jpg"
+            src="/offer.jpg"
             alt="Fashion and lifestyle"
             width={600}
             height={650}
