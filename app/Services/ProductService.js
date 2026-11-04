@@ -1,27 +1,16 @@
 
-const API_URL = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
-
+// import { products } from "../../Data/product";
+import { products } from "../Data/product";
+// Get all products
 export async function getProducts() {
-    const response = await fetch(`${API_URL}/api/product`);
-
-    if (!response.ok) {
-        throw new Error("Failed to fetch products");
-    }
-
-    const data = await response.json();
-    return data;
+    return products;
 }
 
+// Get a single product using its ID
 export async function getProductById(id) {
-    const products = await getProducts();
+    const product = products.find(
+        (product) => product.id === Number(id)
+    );
 
-    for (let product of products) {
-        if (product.id === Number(id)) {
-            return product;
-        }
-    }
-
-    return null;
+    return product || null;
 }

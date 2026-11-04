@@ -8,8 +8,8 @@ export default function Home() {
     { id: 2, Image: "/offer4.jpg", title: "Men's Fashion" },
     { id: 3, Image: "/offer.jpg", title: "Casual Wear" },
     { id: 4, Image: "/offer5.jpg", title: "Elegant Styles" },
-    { id: 5, Image: "/banner.jpg", title: "Summer Collection" },
-    { id: 6, Image: "/banner.jpg", title: "Trendy Outfits" },
+    { id: 5, Image: "/offer8.jpg", title: "Summer Collection" },
+    { id: 6, Image: "/offer7.jpg", title: "Trendy Outfits" },
    
   ];
 
